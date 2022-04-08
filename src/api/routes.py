@@ -21,6 +21,12 @@ def list_sites():
     response = [site.serialize() for site in sites]
     return jsonify(response)
 
+
+@api.route('/hello', methods=['POST', 'GET'])
+def handle_hello():      
+    response_body = { "message": "Hello! I'm a message that came from the backend, check the network tab on the google inspector and you will see the GET request"     }     
+    return jsonify(response_body), 200
+
 @api.route('/comments', methods=['POST'])
 def list_comments():
 
@@ -104,7 +110,7 @@ def add_user():
     if not name or not email or not password:
         return jsonify({"message": "Es necesario completar los campos (Nombre, email y password)", 'color': 'alert-danger', 'ok': False}), 401 
 
-    user = User(img=img, name=name, last_name=last_name, email=email, password=password, is_admin=False, role_id=2)
+    
     db.session.add(user)
     db.session.commit()
 

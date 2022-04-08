@@ -49,6 +49,19 @@ class Site(db.Model):
     def __repr__(self):
         return '%r' % self.id
 
+    
+    def serialize(self):
+        return {
+            "id": self.id,
+            "place_name": self.place_name,
+            "url_site": self.url_site,
+            "url_img": self.url_image,
+            "city": self.city,
+            "description": self.description,
+            "location": self.location,
+            
+        }
+
 class Role(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(80), unique=False, nullable=False)
@@ -106,7 +119,7 @@ class Comment(db.Model):
             "id": self.id,
             "text": self.text,
             "site_id": self.site_id,
-            "user_id": self.user_id,
+            "user_id": self.user.name,
                 
 
         }
