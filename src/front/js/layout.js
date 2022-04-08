@@ -4,6 +4,9 @@ import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./pages/home";
 import { Demo } from "./pages/demo";
+import { Register } from "./pages/register";
+import { Login } from "./pages/login";
+import { Protected } from "./pages/protected";
 import { Single } from "./pages/single";
 import { Detail } from "./pages/detail";
 
@@ -29,8 +32,19 @@ const Layout = () => {
             <Route exact path="/demo">
               <Demo />
             </Route>
+
             <Route exact path="/detail/:id">
               <Detail />
+
+            <Route exact path="/login">
+              <Login />
+            </Route>
+            <Route exact path="/register">
+              <Register />
+            </Route>
+            <Route exact path="/protected">
+              <Protected />
+
             </Route>
             <Route exact path="/single/:theid">
               <Single />

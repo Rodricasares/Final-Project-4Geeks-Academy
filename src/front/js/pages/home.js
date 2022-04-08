@@ -1,15 +1,18 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext";
-
 import "../../styles/home.css";
 import { Navbar } from "../component/navbar";
 import { CardList } from "../component/cardList";
 import { SearchSite } from "../component/search-site";
 
+
+
+
 export const Home = () => {
   const { store, actions } = useContext(Context);
 
   return (
+
     <div className="container-fluid px-0">
       {/* Header */}
       <div className="header">
@@ -46,5 +49,6 @@ export const Home = () => {
       <CardList />
       <div></div>
     </div>
+
   );
 };
