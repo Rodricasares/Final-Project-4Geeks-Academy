@@ -8,6 +8,8 @@ import { Register } from "./pages/register";
 import { Login } from "./pages/login";
 import { Protected } from "./pages/protected";
 import { Single } from "./pages/single";
+import { Detail } from "./pages/detail";
+
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
@@ -30,6 +32,10 @@ const Layout = () => {
             <Route exact path="/demo">
               <Demo />
             </Route>
+
+            <Route exact path="/detail/:id">
+              <Detail />
+
             <Route exact path="/login">
               <Login />
             </Route>
@@ -38,6 +44,7 @@ const Layout = () => {
             </Route>
             <Route exact path="/protected">
               <Protected />
+
             </Route>
             <Route exact path="/single/:theid">
               <Single />

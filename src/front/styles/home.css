@@ -5,3 +5,44 @@
     one more css for each page that will contain the selected used 
     on that page only (the ones not reused in other pages).
 */
+
+
+html {
+  margin: 0px;
+  padding: 0px;
+}
+.header {
+  background: url(https://www07.abb.com/images/librariesprovider113/default-album/abb_smarter_building.jpg?sfvrsn=776f2108_1)
+    center center no-repeat;
+  height: 40vh;
+  width: 100%;
+  background-size: cover;
+  object-fit: cover;
+}
+
+.titulo {
+  font-size: 5vh;
+  margin-top: 5%;
+}
+
+@media (max-width: 768px) {
+  /* Estos estilos solo se aplicarán hasta el tamaño indicado */
+
+  .titulo {
+    font-size: 4vh;
+    margin-top: 100px;
+  }
+
+  /* .header {
+    background-size: 100% 400px;
+    background-repeat: no-repeat;
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+  }*/
+}
+
+/* .resume {
+  background-color: rgb(245, 244, 244);
+} */
+
