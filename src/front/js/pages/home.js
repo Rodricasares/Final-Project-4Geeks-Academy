@@ -7,9 +7,6 @@ export const Home = () => {
   const { store, actions } = useContext(Context);
 
   return (
-    <div className="container">
-      <Navbar />
-      <h1>Rodrigo</h1>
-    </div>
+ 
   );
 };
