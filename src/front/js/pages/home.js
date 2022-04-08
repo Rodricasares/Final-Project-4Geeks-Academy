@@ -1,27 +1,50 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext";
-import rigoImageUrl from "../../img/rigo-baby.jpg";
+
 import "../../styles/home.css";
+import { Navbar } from "../component/navbar";
+import { CardList } from "../component/cardList";
+import { SearchSite } from "../component/search-site";
 
 export const Home = () => {
   const { store, actions } = useContext(Context);
 
   return (
-    <div className="text-center mt-5">
-      <h1>Hello Jose!!</h1>
-      <p>
-        <img src={rigoImageUrl} />
-      </p>
-      <div className="alert alert-info">
-        {store.message ||
-          "Loading message from the backend (make sure your python backend is running)..."}
+    <div className="container-fluid px-0">
+      {/* Header */}
+      <div className="header">
+        <Navbar />
+
+        <h1 className=" titulo text-center text-dark">
+          Aqui va el titulo de la pagina
+        </h1>
       </div>
-      <p>
-        This boilerplate comes with lots of documentation:{" "}
-        <a href="https://github.com/4GeeksAcademy/react-flask-hello/tree/95e0540bd1422249c3004f149825285118594325/docs">
-          Read documentation
-        </a>
-      </p>
+      <SearchSite />
+
+      {/* Resume */}
+      {/* <div className=" resume   container-fluid">
+        <div className="row">
+          <h1 className="h1 px-5 mt-4">Comparte tus viajes con la comunidad</h1>
+        </div>
+        <div className="row ">
+          <div className="col-12  col-sm-6 p-5">
+            <img
+              src="https://www.giuseppegalliano.es/wp-content/uploads/2018/11/video_360_VR_panormaici_.jpg"
+              className="img-fluid border border-2 border-dark rounded-2"
+              alt="imagen"
+            />
+          </div>
+          <div className=" col-12 col-sm-6 mt-5">
+            <h2 className="text-center   ">
+              ¡¡Vive la experiencia de visitar los lugares mas increibles del
+              mundo sin necesidad de coger un avion!!
+            </h2>
+            <h2 className="text-center  mt-3 p-5">Gracias a la realid</h2>
+          </div>
+        </div> 
+      </div>*/}
+      <CardList />
+      <div></div>
     </div>
   );
 };
