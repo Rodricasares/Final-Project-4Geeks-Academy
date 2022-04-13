@@ -1,10 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import { Nav, NavDropdown } from "react-bootstrap";
 
 export const Navbar = () => {
+  let user = localStorage.getItem("user");
+  console.log(user);
+  const history = useHistory();
+  function logOut() {
+    localStorage.clear();
+    history.push("/register");
+  }
   return (
-
-
     <nav className="navbar">
       <div className="container">
         <img
@@ -13,6 +19,15 @@ export const Navbar = () => {
           width="32"
           height="32"
         />
+        <div className="row">
+          <Link>
+            <Nav>
+              <NavDropdown title={user ? user : ""}>
+                <NavDropdown.Item onClick={logOut}>Logout</NavDropdown.Item>
+              </NavDropdown>
+            </Nav>
+          </Link>
+        </div>
         <div className="ml-auto ">
           <Link to="/login">
             <button className="btn btn-outline-light border-0 m-2">
@@ -58,7 +73,6 @@ export const Navbar = () => {
                 </svg>
               </div>
               Sing up
-
             </button>
           </Link>
         </div>

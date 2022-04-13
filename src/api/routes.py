@@ -69,12 +69,9 @@ def login():
         return jsonify({"message": "El usuario no fue encontrado"}), 401
 
     token = create_access_token(identity=user.id)
-
-    data_response = {
-        "token": token,
-        "email": user.email,
-        "user_id": user.id
-    }
+    data_response = user.serialize()
+    data_response["token"] = token
+   
     return jsonify(data_response), 200
 
 

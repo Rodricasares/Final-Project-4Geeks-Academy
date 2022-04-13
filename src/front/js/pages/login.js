@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { useHistory } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { Navbar } from "../component/navbar";
 
@@ -55,7 +55,9 @@ export const Login = () => {
                   .then((data) => {
                     if (data.token) {
                       localStorage.setItem("token", data.token);
-                      history.push("/protected");
+                      localStorage.setItem("user", data.name);
+
+                      history.push("/");
                     } else {
                       alert("Complete los campos obligatorios");
                     }
