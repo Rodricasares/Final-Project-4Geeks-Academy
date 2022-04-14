@@ -8,29 +8,49 @@ export const Navbar = () => {
   const history = useHistory();
   function logOut() {
     localStorage.clear();
-    history.push("/register");
+    history.push("/login");
   }
   return (
     <nav className="navbar">
       <div className="container">
         <img
-          src="/assets/img/bootstrap.svg"
+          src=""
           alt="Bootstrap"
-          width="32"
-          height="32"
+          width="50"
+          height="50"
+          className="rounded-circle"
         />
         <div className="row">
           <Link>
             <Nav>
-              <NavDropdown title={user ? user : ""}>
-                <NavDropdown.Item onClick={logOut}>Logout</NavDropdown.Item>
+              <NavDropdown
+                className="font-weight-bold"
+                title={
+                  user ? (
+                    <img
+                      src={user}
+                      alt="Bootstrap"
+                      width="50"
+                      height="50"
+                      className="rounded-circle"
+                    />
+                  ) : (
+                    ""
+                  )
+                }
+              >
+                <NavDropdown.Item onClick={logOut}>
+                  <button type="button" class="btn btn-danger">
+                    Logout
+                  </button>
+                </NavDropdown.Item>
               </NavDropdown>
             </Nav>
           </Link>
         </div>
         <div className="ml-auto ">
           <Link to="/login">
-            <button className="btn btn-outline-light border-0 m-2">
+            <button className="btn btn-outline-danger border-0 m-2">
               <div className="row pt-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -55,7 +75,7 @@ export const Navbar = () => {
           </Link>
 
           <Link to="/register">
-            <button className="btn btn-outline-light border-0">
+            <button className="btn btn-outline-danger border-0">
               <div className="row pt-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
