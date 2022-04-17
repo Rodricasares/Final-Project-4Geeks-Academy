@@ -24,12 +24,11 @@ export const SearchSite = (props) => {
           id="formId"
           onChange={handleChange}
           placeholder="Introduce un lugar..."
-          readonly
         />
         <button
           type="button"
           onClick={handleSubmit}
-          class="btn btn-light text-secondary fw-bold "
+          className="btn btn-light text-secondary fw-bold "
         >
           Explorar
         </button>
