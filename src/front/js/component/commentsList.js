@@ -6,8 +6,9 @@ export const CommentList = () => {
   const { store, actions } = useContext(Context);
 
   return (
-    <div className=" container-fluid mb-5   ">
-      <h1 className="text-danger px-5">Comentarios</h1>
+    <div className=" container mb-5   ">
+      <h1 className="text-danger py-3">Comentarios</h1>
+
       <div className=" container">
         <div className="row">
           {store.list_comments.map((item, index) => {

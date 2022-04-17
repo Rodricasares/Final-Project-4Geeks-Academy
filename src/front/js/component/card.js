@@ -20,18 +20,14 @@ export const Card = (props) => {
             height="400"
             style={{ borderRadius: "30px" }}
           />
-          <div class="overlay">
-            <div class="text-overlay">Ver video</div>
+          <div className="overlay">
+            <div className="text-overlay">Ver video</div>
           </div>
 
           {/* <div className="card-body position-absolute bottom-0 start-50 translate-middle-x  d-flex    "> */}
           <h5 className="card-title position-absolute bottom-0 start-0 text-light  bg-danger p-1 rounded-pill m-3 p-2 ">
             {props.title}
           </h5>
-
-          <button className=" btn btn-danger position-absolute bottom-0 end-0 m-3 rounded-pill">
-            <i className="far fa-heart" />
-          </button>
         </div>
       </Link>
     </div>

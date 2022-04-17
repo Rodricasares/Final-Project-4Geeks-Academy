@@ -7,11 +7,11 @@ export const Comment = (props) => {
   const { store, actions } = useContext(Context);
 
   return (
-    <div className=" col-md-6 col-lg-3">
-      <div class="card">
-        <div class="card-body">
+    <div className=" col-md-12 col-lg-6 my-3">
+      <div className="card">
+        <div className="card-header fw-bold">{props.user}</div>
+        <div className="card-body">
           <p className="p">{props.text}</p>
-          <p className="p">{props.user}</p>
         </div>
       </div>
     </div>
