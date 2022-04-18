@@ -24,7 +24,7 @@ export const Protected = () => {
       <>
         {checkValidate ? (
           <div className="jumbotron">
-            <div className="alert alert-success " role="alert">
+            <div className="alert alert-success" role="alert">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="30"

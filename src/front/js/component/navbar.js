@@ -3,8 +3,10 @@ import { Link, useHistory } from "react-router-dom";
 import { Nav, NavDropdown } from "react-bootstrap";
 
 export const Navbar = () => {
-  let user = localStorage.getItem("user");
+  let user = localStorage.getItem("name");
+  let logo = localStorage.getItem("logo");
   console.log(user);
+
   const history = useHistory();
   function logOut() {
     localStorage.clear();
@@ -20,34 +22,37 @@ export const Navbar = () => {
           height="50"
           className="rounded-circle"
         />
-        <div className="row">
-          <Link>
-            <Nav>
-              <NavDropdown
-                className="font-weight-bold"
-                title={
-                  user ? (
+
+        <Link to="/">
+          <Nav>
+            <NavDropdown
+              className="font-weight-bold"
+              title={
+                user ? (
+                  <div className="row">
                     <img
-                      src={user}
+                      src={logo}
                       alt="Bootstrap"
-                      width="50"
-                      height="50"
+                      width="36"
+                      height="36"
                       className="rounded-circle"
                     />
-                  ) : (
-                    ""
-                  )
-                }
-              >
-                <NavDropdown.Item onClick={logOut}>
-                  <button type="button" class="btn btn-danger">
-                    Logout
-                  </button>
-                </NavDropdown.Item>
-              </NavDropdown>
-            </Nav>
-          </Link>
-        </div>
+                    <p className="text-center text-danger">{user}</p>
+                  </div>
+                ) : (
+                  ""
+                )
+              }
+            >
+              <NavDropdown.Item onClick={logOut}>
+                <button type="button" class="btn btn-danger">
+                  Logout
+                </button>
+              </NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+        </Link>
+
         <div className="ml-auto ">
           <Link to="/login">
             <button className="btn btn-outline-danger border-0 m-2">

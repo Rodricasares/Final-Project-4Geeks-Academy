@@ -55,8 +55,8 @@ export const Login = () => {
                   .then((data) => {
                     if (data.token) {
                       localStorage.setItem("token", data.token);
-                      localStorage.setItem("user", data.name);
-                      localStorage.setItem("user", data.logo);
+                      localStorage.setItem("name", data.name);
+                      localStorage.setItem("logo", data.logo);
                       history.push("/");
                     } else {
                       alert("Complete los campos obligatorios");
