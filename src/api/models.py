@@ -10,6 +10,8 @@ class User(db.Model):
     name = db.Column(db.String(80), unique=False, nullable=False)
     last_name = db.Column(db.String(80), unique=False, nullable=True)
     img = db.Column(db.String(150), unique=False, nullable=True)
+    user_img = db.Column(db.String(250),unique=False, nullable=False)
+
     #relación
     role_id = db.Column(db.Integer, db.ForeignKey('role.id'),
         nullable=False)
@@ -29,8 +31,8 @@ class User(db.Model):
             "name": self.name,
             "last_name": self.last_name,
             "logo": self.img,
-            "role": self.role.name
-
+            "role": self.role.name,
+            "avatar": self.user_img
             # do not serialize the password, its a security breach
         }
 
