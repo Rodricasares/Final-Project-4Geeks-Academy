@@ -12,7 +12,7 @@ import cloudinary.uploader
 
 api = Blueprint('api', __name__)
 
-
+# Devuelve los sitios que contengan lo que se le pase por el formulario
 @api.route('/sites', methods=['POST'])
 def list_sites():
 
@@ -28,6 +28,8 @@ def handle_hello():
     response_body = { "message": "Hello! I'm a message that came from the backend, check the network tab on the google inspector and you will see the GET request"     }     
     return jsonify(response_body), 200
 
+
+#Devuelve los comentarios que pertenezcan al sitio
 @api.route('/comments', methods=['POST'])
 def list_comments():
 
@@ -37,16 +39,41 @@ def list_comments():
     response = [comment.serialize() for comment in comments]
     return jsonify(response)
 
-@api.route('/comments', methods=['GET'])
-def all_comments():
 
-    
-    comments = Comment.query.all()
-    
-    response = [comment.serialize() for comment in comments]
+#Devuelve las recomendaciones que pertenezcan al sitio
+@api.route('/recommends', methods=['POST'])
+def get_recommends():
+
+    id_site= request.json.get("id_site")
+    recommends = Recommend.query.filter_by(site_id = id_site)
+   
+    response = [recommend.serialize() for recommend in recommends]
     return jsonify(response)
 
+#agrega una recomendacion a la base de datos una vez se clique al boton recomendar  
+@api.route('/addRecommends', methods=['POST'])
+@jwt_required()
+def add_recommends():
 
+    id_site= request.json.get("id_site")
+    recommend = Recommend(site_id= id_site, user_id=get_jwt_identity())
+    db.session.add(recommend)
+    db.session.commit()
+
+#agrega un comentario a la base de datos una vez se clique al boton publicar  
+@api.route('/addComment', methods=['POST'])
+@jwt_required()
+def add_comment():
+
+    id_site = request.json.get("site_id")
+    text = request.json.get("text")
+    newComment = Comment(site_id = id_site, text=text, user_id=get_jwt_identity())
+    db.session.add(newComment)
+    db.session.commit()
+ 
+
+
+#muestra todos los sitios
 @api.route('/sites', methods=['GET'])
 def all_sites():
 
@@ -76,11 +103,6 @@ def login():
     return jsonify(data_response), 200
 
 
-
-
-
-   #Listado de roles
-
 @api.route('/role', methods=['GET'])
 def list_role():
     roles = Role.query.all()
@@ -94,6 +116,8 @@ def list_user():
     users = User.query.all()
     response = [user.serialize() for user in users]
     return jsonify(response), 200
+
+
  #Registro de users
 @api.route('/user', methods=['POST'])
 def add_user():
@@ -122,7 +146,6 @@ def add_user():
     db.session.commit()
     token = create_access_token(identity=user.id)
     return jsonify({"token": token}), 200
-
 
 
 @api.route('/validate', methods=['GET'])

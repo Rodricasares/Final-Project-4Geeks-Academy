@@ -28,10 +28,6 @@ export const Card = (props) => {
           <h5 className="card-title position-absolute bottom-0 start-0 text-light  bg-danger p-1 rounded-pill m-3 p-2 ">
             {props.title}
           </h5>
-
-          <button className=" btn btn-danger position-absolute bottom-0 end-0 m-3 rounded-pill">
-            <i className="far fa-heart" />
-          </button>
         </div>
       </Link>
     </div>

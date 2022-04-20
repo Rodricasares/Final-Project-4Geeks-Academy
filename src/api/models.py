@@ -87,21 +87,19 @@ class Role(db.Model):
 
 class Recommend(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    count = db.Column(db.Integer, nullable=False)
     site_id = db.Column(db.Integer, db.ForeignKey('site.id'),nullable=False)
     site = db.relationship('Site',backref='recommend', lazy=True)
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'),nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=True)
     user = db.relationship('User',backref='recommend', lazy=True)
 
     def __repr__(self):
-        return '<Recommend %r>' % self.count
+        return '<Recommend %r>' % self.id
 
     def serialize(self):
         return {
             "id": self.id,
-            "count": self.count,
             "site_id": self.site_id,
-            "user_id": self.user_id,
+            "user_id": self.user.name,
                 
         }
 
