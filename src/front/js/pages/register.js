@@ -8,23 +8,29 @@ export const Register = () => {
   const { store, actions } = useContext(Context);
   const [data, setData] = useState({});
   const [message, setMessage] = useState({});
+  const [files, setFiles] = useState(null);
 
   const handleChange = (event) => {
     setData({ ...data, [event.target.name]: event.target.value });
   };
-  const handleSubmit = () => {
-    console.log(JSON.stringify(data));
-    fetch(process.env.BACKEND_URL + "/api/user", {
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log("This are the files", files);
+    let body = new FormData();
+    console.log(process.env.BACKEND_URL + "/api/user");
+    body.append("profile_image", files[0]);
+    for (var key in data) {
+      body.append(key, data[key]);
+    }
+    const options = {
+      body,
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    })
+    };
+    fetch(process.env.BACKEND_URL + "/api/user", options)
       .then((resp) => resp.json())
-      .then((resp) => {
-        setMessage(resp);
-      });
+      .then((resp) => setMessage(resp))
+      .catch((errors) => console.error("Errorrr", error));
   };
 
   return (
@@ -36,30 +42,16 @@ export const Register = () => {
 
           <form>
             <div className="container-sm bg-light rounded opacity-75 p-5">
-              <label htmlFor="basic-url" className="form-label">
-                Your vanity URL
-              </label>
-              <div className="input-group mb-3">
-                <span className="input-group-text" id="basic-addon3">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    className="bi bi-image"
-                    viewBox="0 0 16 16"
-                  >
-                    <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
-                    <path d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-12zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1h12z" />
-                  </svg>
-                </span>
+              <label htmlFor="basic-url" className="form-label"></label>
+
+              <div className="input-group flex-nowrap mb-3">
                 <input
-                  name="img"
-                  onChange={handleChange}
-                  type="text"
+                  type="file"
                   className="form-control"
-                  id="basic-url"
-                  aria-describedby="basic-addon3"
+                  id="inputGroupFile04"
+                  aria-describedby="inputGroupFileAddon04"
+                  aria-label="Upload"
+                  onChange={(e) => setFiles(e.target.files)}
                 />
               </div>
 

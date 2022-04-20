@@ -20,8 +20,8 @@ export const Card = (props) => {
             height="400"
             style={{ borderRadius: "30px" }}
           />
-          <div class="overlay">
-            <div class="text-overlay">Ver video</div>
+          <div className="overlay">
+            <div className="text-overlay">Ver video</div>
           </div>
 
           {/* <div className="card-body position-absolute bottom-0 start-50 translate-middle-x  d-flex    "> */}

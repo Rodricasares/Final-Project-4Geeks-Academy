@@ -7,7 +7,8 @@ from api.utils import generate_sitemap, APIException
 from sqlalchemy import func
 from sqlalchemy import or_
 from flask_jwt_extended import jwt_required, create_access_token, jwt_required, get_jwt_identity
-
+import cloudinary
+import cloudinary.uploader
 
 api = Blueprint('api', __name__)
 
@@ -96,13 +97,15 @@ def list_user():
  #Registro de users
 @api.route('/user', methods=['POST'])
 def add_user():
-    data = request.json
+    data = request.form
     img = data.get('img')
     name = data.get('name')
     last_name =data.get('last_name')
     email = data.get('email')
     password = data.get('password')
-    user = User(img=img, name=name, last_name=last_name, email=email, password=password, is_admin=False, role_id=2)
+    result = cloudinary.uploader.upload(request.files['profile_image'], public_id=f'my_folder/hello')
+    
+    user = User(user_img=result['secure_url'], name=name, last_name=last_name, email=email, password=password, is_admin=False, role_id=2)
 
     if not name or not email or not password:
         return jsonify({"message": "Es necesario completar los campos (Nombre, email y password)", 'color': 'alert-danger', 'ok': False}), 401 
@@ -132,6 +135,19 @@ def handle_validate():
     else:
         return jsonify({"validate" : False}), 400
 
+ #cargar imagenes en cloudinary
+ 
+@api.route('/upload', methods=['POST'])
+def handle_upload():
 
-    
+    user1 = User.query.get(1)
+    result = cloudinary.uploader.upload(request.files['profile_image'], public_id=f'my_folder/hello')
+    print(result['secure_url'])
+
+    user1.profile_image_url = result['secure_url']
+
+    db.session.add(user1)
+    db.session.commit()
+
+    return jsonify("All good"), 200
 
