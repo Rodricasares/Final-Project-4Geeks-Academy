@@ -4,23 +4,18 @@ import "../../styles/home.css";
 import { Navbar } from "../component/navbar";
 import { CardList } from "../component/cardList";
 import { SearchSite } from "../component/search-site";
-
-
-
+import titulo from "../../img/titulo.jpg";
 
 export const Home = () => {
   const { store, actions } = useContext(Context);
 
   return (
-
     <div className="container-fluid px-0">
       {/* Header */}
-      <div className="header">
-        <Navbar />
-
-        <h1 className=" titulo text-center text-dark">
-          Aqui va el titulo de la pagina
-        </h1>
+      <div className="row">
+        <div className="header">
+          <Navbar />
+        </div>
       </div>
       <SearchSite />
 
@@ -49,6 +44,5 @@ export const Home = () => {
       <CardList />
       <div></div>
     </div>
-
   );
 };
