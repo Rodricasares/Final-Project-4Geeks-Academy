@@ -15,15 +15,16 @@ export const SearchSite = (props) => {
   };
 
   return (
-    <div className="container searchSite p-2 rounded-3 bg-danger   ">
-      <div className="d-flex ">
+    <div className="container p-2 rounded-3 bg-danger my-3   ">
+      <h4 className="ms-3">Bucador de lugares</h4>
+      <div className="d-flex m-3 ">
         <input
           type="text"
           name="site"
-          className="form-control form-control-lg mx-1"
+          className="form-control form-control-lg mx-1 "
           id="formId"
           onChange={handleChange}
-          placeholder="Introduce un lugar..."
+          placeholder="Introduce un lugar o ciudad..."
         />
         <button
           type="button"

@@ -1,3 +1,12 @@
 .iframe {
   background-color: rgba(150, 147, 147, 0.397);
 }
+
+.detail {
+  background-image: url("https://img.freepik.com/vector-gratis/fondo-abstracto-blanco-estilo-papel-3d_23-2148403778.jpg?w=2000");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  object-fit: cover;
+}

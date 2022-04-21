@@ -15,6 +15,9 @@ export const Home = () => {
       <div className="row">
         <div className="header">
           <Navbar />
+          <h1 className="titulo text-center">
+            Travel<span className="text-danger">360</span>
+          </h1>
         </div>
       </div>
       <SearchSite />
