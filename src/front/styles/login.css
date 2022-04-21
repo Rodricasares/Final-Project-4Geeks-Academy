@@ -1,6 +1,8 @@
 .login {
   background-image: url("https://img.static-af.com/images/media/26743379-B7FE-440F-8E524E30B13E20D3/");
   background-repeat: no-repeat;
-  height: 100%;
+  background-size: cover;
+  object-fit: cover;
+  height: 900px;
   width: 100%;
 }

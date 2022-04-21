@@ -8,13 +8,13 @@ export const Login = () => {
   const [user, setUser] = useState({});
   let history = useHistory();
   return (
-    <div className="row ">
-      <div className="containe login">
+    <div className="row login">
+      <div className="containe ">
         <Navbar />
         <div className="row  justify-content-center">
           <div className="col-md-6 col-sm-4">
             <h3 className="text-center text-white p-3">Login</h3>
-            <div className="container-sm bg-light rounded opacity-75 p-5">
+            <div className="container-sm bg-light rounded opacity-75 p-5 mb-5">
               <div className="form-floating mb-3">
                 <input
                   type="email"
