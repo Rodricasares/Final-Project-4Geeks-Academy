@@ -5,6 +5,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       list_comments: [],
       list_recommends: [],
       roles: [],
+      newSite: [],
     },
     actions: {
       // Use getActions to call a function within a fuction
@@ -24,6 +25,22 @@ const getState = ({ getStore, getActions, setStore }) => {
             console.log("Error loading message from backend", error)
           );
       },
+
+      // addSite: (newSite) => {
+      //   fetch(process.env.BACKEND_URL + "/api/addSite", {
+      //     method: "POST",
+      //     body: JSON.stringify({ newSite: newSite }),
+      //     headers: {
+      //       "Content-Type": "application/json",
+      //       Authorization: "Bearer " + localStorage.getItem("token"),
+      //     },
+      //   })
+      //     .then((resp) => resp.json())
+      //     .then((data) => setStore({ newSite: data }))
+      //     .catch((error) =>
+      //       console.log("Error loading message from backend", error)
+      //     );
+      // },
 
       //devuelve mensajes
       getMessage: () => {

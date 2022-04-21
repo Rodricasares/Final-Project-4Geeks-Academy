@@ -29,6 +29,26 @@ def handle_hello():
     return jsonify(response_body), 200
 
 
+
+@api.route('/addSite', methods=['POST'])
+@jwt_required()
+def new_site():
+    data = request.json
+    place_name = data.get('name')
+    url_site = data.get('video')
+    city = data.get('city')
+    description = data.get('description')
+    location = data.get('location')
+    url_image = data.get('image')
+    user_id = get_jwt_identity()
+
+    newSite = Site(place_name=place_name,url_site=url_site,url_image=url_image,city=city,description=description,location=location,user_id=user_id)
+    db.session.add(newSite)
+    db.session.commit()
+
+
+
+
 #Devuelve los comentarios que pertenezcan al sitio
 @api.route('/comments', methods=['POST'])
 def list_comments():

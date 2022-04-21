@@ -44,7 +44,8 @@ class Site(db.Model):
     city = db.Column(db.String(150), unique=False, nullable=False)
     description = db.Column(db.String(1000), unique=False, nullable=False)
     location = db.Column(db.String(200), unique=False, nullable=False)
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'),nullable=True )
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'),nullable=False )
+    user = db.relationship('User',backref='site', lazy=True)
     url_image = db.Column(db.String(1000), unique=False, nullable=True)
     
 
@@ -61,6 +62,7 @@ class Site(db.Model):
             "city": self.city,
             "description": self.description,
             "location": self.location,
+            "user_id": self.user_id
             
         }
 

@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Link, useParams, useHistory } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { Navbar } from "../component/navbar";
+import { AddSite } from "../component/addSite";
 
 export const Protected = () => {
   const { store, actions } = useContext(Context);
@@ -47,6 +48,7 @@ export const Protected = () => {
           </div>
         ) : null}
       </>
+      <AddSite />
     </div>
   );
 };
