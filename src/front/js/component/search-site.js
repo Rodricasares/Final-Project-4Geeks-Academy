@@ -15,12 +15,12 @@ export const SearchSite = (props) => {
   };
 
   return (
-    <div className="container searchSite p-4 rounded-3 bg-danger   ">
+    <div className="container searchSite p-2 rounded-3 bg-danger   ">
       <div className="d-flex ">
         <input
           type="text"
           name="site"
-          className="form-control form-control-lg mx-3"
+          className="form-control form-control-lg mx-1"
           id="formId"
           onChange={handleChange}
           placeholder="Introduce un lugar..."
