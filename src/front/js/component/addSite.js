@@ -24,7 +24,7 @@ export const AddSite = (props) => {
   return (
     <div>
       <form>
-        <div class="container-sm bg-light rounded opacity-75 p-5 m-3">
+        <div class="container-sm bg-light rounded  p-5 m-3">
           <h1 className="m-3">Añadir nuevo Lugar</h1>
           <label for="name" class="form-label">
             Nombre del sitio

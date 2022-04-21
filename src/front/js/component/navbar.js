@@ -15,13 +15,15 @@ export const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="container">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png?20170517184425"
-          alt="Bootstrap"
-          width="50"
-          height="50"
-          className="rounded-circle"
-        />
+        <a href="/">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png?20170517184425"
+            alt="Bootstrap"
+            width="50"
+            height="50"
+            className="rounded-circle"
+          />
+        </a>
         {/* */}
         {login ? (
           <div className="ml-auto">
