@@ -20,6 +20,9 @@ html {
   object-fit: cover;
   padding-bottom: 10%;
 }
+body {
+  font-size: auto;
+}
 
 .fondo_protected {
   background: url(http://3.bp.blogspot.com/-unDSk7V2kiY/UQgeF0pIpjI/AAAAAAAABs4/vr71xsz6wNc/s1600/poder-punto_002.jpg);
@@ -33,17 +36,45 @@ html {
 }
 
 .titulo {
-  font-size: 100px;
+  font-size: 200px;
+  font-family: "Staatliches", cursive;
+  color: white;
   /* margin-top: 5%; */
 }
 
+.about {
+  font-family: "Staatliches", cursive;
+  color: gray;
+  font-size: 68px;
+}
+.textAbout {
+  font-family: "Poiret One", cursive;
+  font-size: 20px;
+}
+.infoCard {
+  font-family: "Poiret One", cursive;
+  font-size: 15px;
+}
+
+h3 {
+  font-family: "Staatliches", cursive;
+}
+h4 {
+  font-family: "Staatliches", cursive;
+}
+h5 {
+  font-family: "Staatliches", cursive;
+}
+p {
+  font-family: "Poiret One", cursive;
+}
 @media (max-width: 768px) {
   /* Estos estilos solo se aplicarán hasta el tamaño indicado */
-
+  /*
   .titulo {
     font-size: 6vh;
     margin-top: 50px;
-  }
+  }*/
 
   /* .header {
     background-size: 100% 400px;
