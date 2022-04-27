@@ -23,6 +23,19 @@ def list_sites():
     return jsonify(response)
 
 
+@api.route('/detailSite', methods=['POST'])
+def getSite():
+
+    id_site = request.json.get("id_site")
+    site = Site.query.get(id_site)
+    
+    
+    return jsonify(site.serialize())
+
+
+
+
+
 @api.route('/hello', methods=['POST', 'GET'])
 def handle_hello():      
     response_body = { "message": "Hello! I'm a message that came from the backend, check the network tab on the google inspector and you will see the GET request"     }     
@@ -102,6 +115,17 @@ def all_sites():
     
     response = [site.serialize() for site in sites]
     return jsonify(response)
+
+@api.route('/userSites', methods=['POST'])
+@jwt_required()
+def user_sites():
+
+    user= get_jwt_identity()
+    userSites = Site.query.filter_by(user_id = user)
+    
+    response = [site.serialize() for site in userSites]
+    return jsonify(response)
+
 
 
 

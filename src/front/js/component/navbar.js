@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, useHistory } from "react-router-dom";
+import logotipo from "../../img/logotipo.png";
 
 export const Navbar = () => {
   let user = localStorage.getItem("name");
@@ -17,10 +18,10 @@ export const Navbar = () => {
       <div className="container">
         <a href="/">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png?20170517184425"
+            src={logotipo}
             alt="Bootstrap"
-            width="50"
-            height="50"
+            width="100"
+            height="100"
             className="rounded-circle"
           />
         </a>

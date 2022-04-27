@@ -9,6 +9,7 @@ import { Login } from "./pages/login";
 import { Protected } from "./pages/protected";
 import { Single } from "./pages/single";
 import { Detail } from "./pages/detail";
+import { AddSite } from "./pages/addSite";
 
 import injectContext from "./store/appContext";
 
@@ -44,6 +45,9 @@ const Layout = () => {
             </Route>
             <Route exact path="/protected">
               <Protected />
+            </Route>
+            <Route exact path="/addSite">
+              <AddSite />
             </Route>
             <Route exact path="/single/:theid">
               <Single />

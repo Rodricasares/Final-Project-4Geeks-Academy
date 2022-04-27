@@ -9,7 +9,17 @@ export const Comment = (props) => {
   return (
     <div className=" col-md-12 col-lg-6 my-3">
       <div className="card">
-        <div className="card-header fw-bold">{props.user}</div>
+        <div className="card-header  bg-danger d-flex justify-content-between fw-bold">
+          {props.user}
+
+          <img
+            src={props.avatar}
+            alt="Bootstrap"
+            width="30"
+            height="30"
+            className="rounded-circle "
+          />
+        </div>
         <div className="card-body">
           <p className="p">{props.text}</p>
         </div>
@@ -21,4 +31,5 @@ export const Comment = (props) => {
 Comment.propTypes = {
   text: propTypes.string,
   user: propTypes.number,
+  avatar: propTypes.string,
 };

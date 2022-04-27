@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Context } from "../store/appContext";
 import propTypes from "prop-types";
+import { Navbar } from "../component/navbar";
 
 export const AddSite = (props) => {
   const { store, actions } = useContext(Context);
@@ -22,9 +23,10 @@ export const AddSite = (props) => {
   };
 
   return (
-    <div>
+    <div className=" container-fluid protected">
+      <Navbar />
       <form>
-        <div class="container-sm bg-light rounded mx-auto  p-5 m-3">
+        <div class="container-sm bg-light rounded mx-auto   p-5 m-3">
           <h1 className="m-3">Añadir nuevo Lugar</h1>
           <label for="name" class="form-label">
             Nombre del sitio
@@ -109,7 +111,7 @@ export const AddSite = (props) => {
             className="btn btn-primary"
             onClick={handleSubmit}
           >
-            Submit
+            Añadir
           </button>
         </div>
       </form>

@@ -21,6 +21,17 @@ html {
   padding-bottom: 10%;
 }
 
+.fondo_protected {
+  background: url(http://3.bp.blogspot.com/-unDSk7V2kiY/UQgeF0pIpjI/AAAAAAAABs4/vr71xsz6wNc/s1600/poder-punto_002.jpg);
+  background-repeat: no-repeat;
+  max-width: 100%;
+  height: 900px;
+
+  background-size: cover;
+  object-fit: cover;
+  padding-bottom: 10%;
+}
+
 .titulo {
   font-size: 100px;
   /* margin-top: 5%; */

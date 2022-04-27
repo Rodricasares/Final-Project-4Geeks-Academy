@@ -16,8 +16,7 @@ export const SearchSite = (props) => {
 
   return (
     <div className="container p-2 rounded-3 bg-danger my-3   ">
-      <h4 className="ms-3">Bucador de lugares</h4>
-      <div className="d-flex m-3 ">
+      <div className="d-flex  ">
         <input
           type="text"
           name="site"
@@ -26,6 +25,7 @@ export const SearchSite = (props) => {
           onChange={handleChange}
           placeholder="Introduce un lugar o ciudad..."
         />
+
         <button
           type="button"
           onClick={handleSubmit}

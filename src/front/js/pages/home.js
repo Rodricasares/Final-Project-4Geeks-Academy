@@ -1,13 +1,18 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Context } from "../store/appContext";
 import "../../styles/home.css";
 import { Navbar } from "../component/navbar";
 import { CardList } from "../component/cardList";
 import { SearchSite } from "../component/search-site";
 import titulo from "../../img/titulo.jpg";
+import { Card } from "../component/card.js";
 
 export const Home = () => {
   const { store, actions } = useContext(Context);
+
+  useEffect(() => {
+    actions.getAllSites();
+  }, []);
 
   return (
     <div className="container-fluid px-0">
@@ -28,7 +33,7 @@ export const Home = () => {
           <CardList />
         </div>
         <div className="row ">
-          <div className="col-12  col-sm-6 p-5">
+          <div className="col-12  col-sm-6 ">
             <div
               id="carouselExampleCaptions"
               className="carousel slide shadow p-3 mb-5 bg-body rounded"
@@ -129,7 +134,7 @@ export const Home = () => {
               </button>
             </div>
           </div>
-          <div className=" col-12 col-sm-6 mt-5">
+          <div className=" col-12 col-sm-6 ">
             <div class="col shadow p-3 mb-5 bg-body rounded">
               <div class="card ">
                 <iframe
@@ -158,6 +163,23 @@ export const Home = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+      <div className=" container-fluid mb-5   ">
+        <h1 className="text-danger px-5"></h1>
+        <div className=" container">
+          <div className="row">
+            {store.allSites.map((item, index) => {
+              return (
+                <Card
+                  key={index}
+                  title={item.place_name}
+                  img={item.url_img}
+                  id={item.id}
+                />
+              );
+            })}
           </div>
         </div>
       </div>

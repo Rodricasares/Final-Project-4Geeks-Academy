@@ -12,7 +12,14 @@ export const CommentList = () => {
       <div className=" container">
         <div className="row">
           {store.list_comments.map((item, index) => {
-            return <Comment key={index} text={item.text} user={item.user_id} />;
+            return (
+              <Comment
+                key={index}
+                text={item.text}
+                user={item.user_id}
+                avatar={item.avatar}
+              />
+            );
           })}
         </div>
       </div>

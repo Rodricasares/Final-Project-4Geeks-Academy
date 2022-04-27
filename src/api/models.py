@@ -62,7 +62,8 @@ class Site(db.Model):
             "city": self.city,
             "description": self.description,
             "location": self.location,
-            "user_id": self.user_id
+            "user_id": self.user_id,
+            
             
         }
 
@@ -122,6 +123,8 @@ class Comment(db.Model):
             "text": self.text,
             "site_id": self.site_id,
             "user_id": self.user.name,
+            "avatar": self.user.user_img
+
                 
 
         }

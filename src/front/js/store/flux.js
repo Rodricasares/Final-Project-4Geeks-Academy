@@ -2,6 +2,8 @@ const getState = ({ getStore, getActions, setStore }) => {
   return {
     store: {
       list_sites: [],
+      allSites: [],
+      userSites: [],
       list_comments: [],
       list_recommends: [],
       roles: [],
@@ -26,21 +28,29 @@ const getState = ({ getStore, getActions, setStore }) => {
           );
       },
 
-      // addSite: (newSite) => {
-      //   fetch(process.env.BACKEND_URL + "/api/addSite", {
-      //     method: "POST",
-      //     body: JSON.stringify({ newSite: newSite }),
-      //     headers: {
-      //       "Content-Type": "application/json",
-      //       Authorization: "Bearer " + localStorage.getItem("token"),
-      //     },
-      //   })
-      //     .then((resp) => resp.json())
-      //     .then((data) => setStore({ newSite: data }))
-      //     .catch((error) =>
-      //       console.log("Error loading message from backend", error)
-      //     );
-      // },
+      getAllSites: () => {
+        fetch(process.env.BACKEND_URL + "/api/sites")
+          .then((res) => res.json())
+          .then((data) => setStore({ allSites: data }))
+          .catch((error) =>
+            console.log("Error loading message from backend", error)
+          );
+      },
+
+      getUserSites: () => {
+        fetch(process.env.BACKEND_URL + "/api/userSites", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: "Bearer " + localStorage.getItem("token"),
+          },
+        })
+          .then((res) => res.json())
+          .then((data) => setStore({ userSites: data }))
+          .catch((error) =>
+            console.log("Error loading message from backend", error)
+          );
+      },
 
       //devuelve mensajes
       getMessage: () => {
