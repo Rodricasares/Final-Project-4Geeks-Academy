@@ -8,11 +8,11 @@ import titulo from "../../img/titulo.jpg";
 
 export const Home = () => {
   const { store, actions } = useContext(Context);
-
+  /*
   useEffect(() => {
     actions.getListSites();
   }, []);
-
+*/
   return (
     <div className="container-fluid px-0">
       <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -59,7 +59,7 @@ export const Home = () => {
         </div>
 
         <div className="row ">
-          <div className="col-12  col-sm-6 p-5">
+          <div className="col-12  col-sm-6 p-4">
             <div
               id="carouselExampleCaptions"
               className="carousel slide shadow p-3 mb-5 bg-body rounded"
@@ -97,7 +97,7 @@ export const Home = () => {
                   />
                   <div className="carousel-caption d-none d-md-block">
                     <h5>El mundo en un solo click</h5>
-                    <p>
+                    <p className="fw-bold">
                       Visita cualquier lugar del mundo y vive una experiencia
                       única.{" "}
                     </p>
@@ -192,31 +192,55 @@ export const Home = () => {
         </div>
 
         <div className="d-flex justify-content-center border-bottom"></div>
-        {/* parte 2*/}
+
+        {/* parte 2************************************************************************/}
+
         <div className="row ">
-          <div className="col-12  col-sm-6 p-5">
-            {store.list_sites.map((value, index) => (
-              <div
-                className="row g-0  shadow p-3 mb-4 bg-body rounded"
-                key={index}
-              >
-                <div class="col-sm-6 col-md-8">
-                  {" "}
-                  <h6>{value.place_name}</h6>
-                  <br></br>
-                  {value.description}
-                </div>
-                <div class="col-6 col-md-4">
-                  {" "}
-                  <img
-                    src={value.url_img}
-                    alt="Bootstrap"
-                    width="100%"
-                    height="120"
-                  />
-                </div>
+          <div className="col-12  col-sm-6 py-5">
+            <div class="row g-0 shadow p-3 mb-2 bg-body rounded">
+              <div className="col-sm-6 col-md-8 p-3  infoCard">
+                <h5>What is Lorem Ipsum?</h5>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. It was
+                popularised in the 1960s with the release of Letraset sheets
+                containing Lorem Ipsum passages, and more recently with desktop
+                publishing software like Aldus PageMaker including versions of
+                Lorem Ipsum.
               </div>
-            ))}
+              <div className="col-6 col-md-4">
+                <img
+                  src="https://viajes.nationalgeographic.com.es/medio/2019/06/06/macu_5da3ead6_1200x630.jpg"
+                  width="100%"
+                  height="100%"
+                />
+              </div>
+            </div>
+            <div class="row g-0 shadow p-3 mb-2 bg-body rounded">
+              <div className="col-sm-6 col-md-8 p-3 infoCard">
+                <h5>What is Lorem Ipsum?</h5>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. It was
+                popularised in the 1960s with the release of Letraset sheets
+                containing Lorem Ipsum passages, and more recently with desktop
+                publishing software like Aldus PageMaker including versions of
+                Lorem Ipsum.
+              </div>
+              <div className="col-6 col-md-4">
+                <img
+                  src="https://viajes.nationalgeographic.com.es/medio/2019/06/06/macu_5da3ead6_1200x630.jpg"
+                  width="100%"
+                  height="100%"
+                />
+              </div>
+            </div>
           </div>
           <div className=" col-12 col-sm-6 mt-5">
             <div class="col shadow p-3 mb-5 bg-body rounded">
@@ -231,14 +255,14 @@ export const Home = () => {
                   allowfullscreen
                 ></iframe>
                 <div class="card-body ">
-                  <h4 class="card-title">Viaja alrededor del Mundo</h4>
+                  <h4 class="card-title pb-2">Viaja alrededor del Mundo</h4>
                   <p class="card-text ">
                     ¡¡Vive la experiencia de visitar los lugares mas increibles
                     del mundo sin necesidad de coger un avion!!
                   </p>
                   <h5>
                     Graba tu experiencia y compartela con{" "}
-                    <span class="badge bg-danger">nosotr@s!!!</span>
+                    <span class="badge bg-danger ">nosotr@s!!!</span>
                   </h5>
 
                   <h3 className="text-center">
