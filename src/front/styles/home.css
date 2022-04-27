@@ -20,19 +20,39 @@ html {
   object-fit: cover;
   padding-bottom: 10%;
 }
+body {
+  font-size: auto;
+}
 
 .titulo {
-  font-size: 100px;
+  font-size: 200px;
+  font-family: "Staatliches", cursive;
+  color: white;
   /* margin-top: 5%; */
 }
 
+.about {
+  font-family: "Staatliches", cursive;
+  color: gray;
+  font-size: 68px;
+}
+.textAbout {
+  font-family: "Poiret One", cursive;
+  font-size: 20px;
+}
+h5 {
+  font-family: "Staatliches", cursive;
+}
+p {
+  font-family: "Poiret One", cursive;
+}
 @media (max-width: 768px) {
   /* Estos estilos solo se aplicarán hasta el tamaño indicado */
-
+  /*
   .titulo {
     font-size: 6vh;
     margin-top: 50px;
-  }
+  }*/
 
   /* .header {
     background-size: 100% 400px;

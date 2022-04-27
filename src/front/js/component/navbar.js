@@ -17,11 +17,10 @@ export const Navbar = () => {
       <div className="container">
         <a href="/">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png?20170517184425"
+            src="https://www.seekpng.com/png/full/196-1963206_turbocharger-360-degree-video-icon.png"
             alt="Bootstrap"
             width="50"
             height="50"
-            className="rounded-circle"
           />
         </a>
         {/* */}

@@ -45,19 +45,13 @@ export const Detail = () => {
                   ></iframe>
                   <p className="p m-3 fw-bold text-start">{item.description}</p>
                   <div className=" d-flex justify-content-between">
-                    <button className=" btn btn-danger ms-4  rounded-pill">
+                    <button
+                      className=" btn btn-danger ms-4  rounded-pill"
+                      onClick={addRecommend}
+                    >
                       <i className="far fa-heart" />{" "}
                       {store.list_recommends ? store.list_recommends.length : 0}{" "}
                     </button>
-
-                    <div className="">
-                      <button
-                        onClick={addRecommend}
-                        className="btn btn-danger mx-2"
-                      >
-                        recomendar
-                      </button>
-                    </div>
                   </div>
                 </div>
 

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { Context } from "../store/appContext";
 import "../../styles/home.css";
 import { Navbar } from "../component/navbar";
@@ -9,15 +9,45 @@ import titulo from "../../img/titulo.jpg";
 export const Home = () => {
   const { store, actions } = useContext(Context);
 
+  useEffect(() => {
+    actions.getListSites();
+  }, []);
+
   return (
     <div className="container-fluid px-0">
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Anton&family=Pacifico&family=Permanent+Marker&family=Poiret+One&family=Quicksand:wght@300&family=Staatliches&display=swap"
+        rel="stylesheet"
+      />
+
       {/* Header */}
       <div className="row">
         <div className="header">
           <Navbar />
-          <h1 className="titulo text-center">
+
+          <h5 className="titulo text-center">
+            {" "}
+            <div className="d-flex justify-content-center opacity-75">
+              <h1 className="row text-secondary mx-4 border-bottom">
+                Barcelona
+              </h1>
+
+              <h1 className="row text-secondary mx-4 border-bottom">
+                Nueva York
+              </h1>
+
+              <h1 className="row text-secondary mx-4 border-bottom">Roma</h1>
+            </div>
+            <div className="d-flex justify-content-center opacity-75">
+              <h3 className="row text-dark mx-4">Sagrada Familia</h3>
+              <h3 className="row text-light mx-4">La séptima avenida</h3>
+              <h3 className="row text-dark mx-3">El coliseo</h3>
+              <h3 className="row text-light mx-3">La Alhambra</h3>
+            </div>
             Travel<span className="text-danger">360</span>
-          </h1>
+          </h5>
         </div>
       </div>
       <SearchSite />
@@ -27,6 +57,7 @@ export const Home = () => {
         <div className="row">
           <CardList />
         </div>
+
         <div className="row ">
           <div className="col-12  col-sm-6 p-5">
             <div
@@ -128,6 +159,64 @@ export const Home = () => {
                 <span className="visually-hidden">Next</span>
               </button>
             </div>
+          </div>
+          <div className=" col-12 col-sm-6 mt-5">
+            <div class="card  border-0">
+              <div class="card-body ">
+                <h4 class="card-title about">About Us</h4>
+                <p class="card-text textAbout">
+                  Where does it come from? Contrary to popular belief, Lorem
+                  Ipsum is not simply random text. It has roots in a piece of
+                  classical Latin literature from 45 BC, making it over 2000
+                  years old. Richard McClintock, a Latin professor at
+                  Hampden-Sydney College in Virginia, looked up one of the more
+                  obscure Latin words, consectetur, from a Lorem Ipsum passage,
+                  and going through the cites of the word in classical
+                  literature, discovered the undoubtable source. Lorem Ipsum
+                  comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum
+                  et Malorum" (The Extremes of Good and Evil) by Cicero, written
+                  in 45 BC. This book is a treatise on the theory of ethics,
+                  very popular during the Renaissance. The first line of Lorem
+                  Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
+                  section 1.10.32. The standard chunk of Lorem Ipsum used since
+                  the 1500s is reproduced below for those interested. Sections
+                  1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by
+                  Cicero are also reproduced in their exact original form,
+                  accompanied by English versions from the 1914 translation by
+                  H. Rackham.
+                </p>
+                <h3 className="text-center"></h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="d-flex justify-content-center border-bottom"></div>
+        {/* parte 2*/}
+        <div className="row ">
+          <div className="col-12  col-sm-6 p-5">
+            {store.list_sites.map((value, index) => (
+              <div
+                className="row g-0  shadow p-3 mb-4 bg-body rounded"
+                key={index}
+              >
+                <div class="col-sm-6 col-md-8">
+                  {" "}
+                  <h6>{value.place_name}</h6>
+                  <br></br>
+                  {value.description}
+                </div>
+                <div class="col-6 col-md-4">
+                  {" "}
+                  <img
+                    src={value.url_img}
+                    alt="Bootstrap"
+                    width="100%"
+                    height="120"
+                  />
+                </div>
+              </div>
+            ))}
           </div>
           <div className=" col-12 col-sm-6 mt-5">
             <div class="col shadow p-3 mb-5 bg-body rounded">
