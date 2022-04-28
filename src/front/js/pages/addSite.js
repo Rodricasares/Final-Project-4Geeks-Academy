@@ -28,19 +28,20 @@ export const AddSite = (props) => {
       <form>
         <div class="container-sm bg-light rounded mx-auto   p-5 m-3">
           <h1 className="m-3">Añadir nuevo Lugar</h1>
-          <label for="name" class="form-label">
-            Nombre del sitio
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="name"
-            name="name"
-            placeholder="Escriba el nombre del lugar"
-            onChange={handleChange}
-          />
-
-          <div class="mb-3">
+          <div class="mb-3 ">
+            <label for="name" class="form-label">
+              Nombre del sitio
+            </label>
+            <input
+              type="text"
+              className="form-control"
+              id="name"
+              name="name"
+              placeholder="Escriba el nombre del lugar"
+              onChange={handleChange}
+            />
+          </div>
+          <div class="mb-3 ">
             <label for="city" class="form-label">
               Ciudad
             </label>

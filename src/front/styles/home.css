@@ -9,6 +9,7 @@
 html {
   margin: 0px;
   padding: 0px;
+  position: relative;
 }
 
 .header {
@@ -70,21 +71,16 @@ p {
 }
 @media (max-width: 768px) {
   /* Estos estilos solo se aplicarán hasta el tamaño indicado */
-  /*
+
   .titulo {
     font-size: 6vh;
     margin-top: 50px;
-  }*/
-
+  }
   /* .header {
     background-size: 100% 400px;
     background-repeat: no-repeat;
     height: 400px;
     background-position: center;
     background-size: cover;
-  }*/
+  } */
 }
-
-/* .resume {
-  background-color: rgb(245, 244, 244);
-} */

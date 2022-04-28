@@ -28,7 +28,7 @@ export const Home = () => {
         <div className="header">
           <Navbar />
 
-          <h5 className="titulo text-center">
+          <h5 className="titulo text-dark text-center">
             {" "}
             <div className="d-flex justify-content-center opacity-75">
               <h1 className="row text-secondary mx-4 border-bottom">
@@ -41,11 +41,11 @@ export const Home = () => {
 
               <h1 className="row text-secondary mx-4 border-bottom">Roma</h1>
             </div>
-            <div className="d-flex justify-content-center opacity-75">
+            <div className="d-flex justify-content-center  opacity-75">
               <h3 className="row text-dark mx-4">Sagrada Familia</h3>
-              <h3 className="row text-light mx-4">La séptima avenida</h3>
+              <h3 className="row text-danger mx-4">La séptima avenida</h3>
               <h3 className="row text-dark mx-3">El coliseo</h3>
-              <h3 className="row text-light mx-3">La Alhambra</h3>
+              <h3 className="row text-danger mx-3">La Alhambra</h3>
             </div>
             Travel<span className="text-danger">360</span>
           </h5>

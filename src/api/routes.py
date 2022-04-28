@@ -116,6 +116,7 @@ def all_sites():
     response = [site.serialize() for site in sites]
     return jsonify(response)
 
+
 @api.route('/userSites', methods=['POST'])
 @jwt_required()
 def user_sites():
