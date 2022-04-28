@@ -109,5 +109,6 @@ export const Detail = () => {
       <CommentList />
       <AddComment site_id={params.id} />
     </div>
+    
   );
 };
