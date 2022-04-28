@@ -48,6 +48,7 @@ class Site(db.Model):
     user = db.relationship('User',backref='site', lazy=True)
     url_image = db.Column(db.String(1000), unique=False, nullable=True)
     
+    
 
     def __repr__(self):
         return '%r' % self.id
@@ -63,6 +64,8 @@ class Site(db.Model):
             "description": self.description,
             "location": self.location,
             "user_id": self.user_id,
+            # "user_name": self.user.name,
+            # "avatar": self.user.user_img,
             
             
         }

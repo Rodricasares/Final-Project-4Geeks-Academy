@@ -40,7 +40,9 @@ export const Detail = () => {
     <div className="container-fluid p-0 detail ">
       <Navbar />
 
-      <h1 className=" text-center h1 m-3">{site.place_name}</h1>
+      <h1 className=" h1 text-center m-3 text-danger">
+        {site.place_name} - {site.city}
+      </h1>
       <div className=" iframe container text-center pb-4 px-0 rounded-3">
         <iframe
           className="rounded-2 border border-2 border-dark "
@@ -53,6 +55,7 @@ export const Detail = () => {
           allowFullScreen
         ></iframe>
         <p className="p m-3 fw-bold text-start">{site.description}</p>
+
         <div className=" d-flex justify-content-between">
           <button
             className=" btn btn-danger ms-4  rounded-pill"
@@ -61,6 +64,17 @@ export const Detail = () => {
             <i className="far fa-heart" />{" "}
             {store.list_recommends ? store.list_recommends.length : 0}{" "}
           </button>
+          <p className="me-3">
+            <strong>Creado por: </strong>
+            {site.user_name}{" "}
+            <img
+              src={site.avatar}
+              alt="Bootstrap"
+              width="30"
+              height="30"
+              className="rounded-circle border border-dark "
+            />
+          </p>
         </div>
       </div>
 
