@@ -35,6 +35,12 @@ export const Register = () => {
 
   return (
     <div className="container-fluid register ">
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Anton&family=Pacifico&family=Permanent+Marker&family=Poiret+One&family=Quicksand:wght@300&family=Staatliches&display=swap"
+        rel="stylesheet"
+      />
       <Navbar />
       <div className="row justify-content-center">
         <div className="col-md-6 col-sm-4">
@@ -73,8 +79,8 @@ export const Register = () => {
                   onChange={handleChange}
                   type="text"
                   className="form-control"
-                  placeholder="Nombre"
-                  aria-label="Nombre"
+                  placeholder="Name"
+                  aria-label="Name"
                   aria-describedby="addon-wrapping"
                 />
               </div>
@@ -101,8 +107,8 @@ export const Register = () => {
                   onChange={handleChange}
                   type="text"
                   className="form-control"
-                  placeholder="Primer apellido"
-                  aria-label="Primer apellido"
+                  placeholder="Last Name"
+                  aria-label="Last Name"
                   aria-describedby="addon-wrapping"
                 />
               </div>
@@ -132,10 +138,10 @@ export const Register = () => {
 
               <button
                 type="button"
-                className="btn btn-primary"
+                className="btn btn-outline-danger"
                 onClick={handleSubmit}
               >
-                Crear usuario
+                New User
               </button>
               <div className="row pt-3">
                 {message.message ? (

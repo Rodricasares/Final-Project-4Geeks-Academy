@@ -10,3 +10,10 @@
   margin: auto;
   width: 900px;
 }
+
+h3 {
+  font-family: "Staatliches", cursive;
+}
+input {
+  font-family: "Poiret One", cursive;
+}

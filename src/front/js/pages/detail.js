@@ -38,6 +38,12 @@ export const Detail = () => {
 
   return (
     <div className="container-fluid p-0 detail ">
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Anton&family=Pacifico&family=Permanent+Marker&family=Poiret+One&family=Quicksand:wght@300&family=Staatliches&display=swap"
+        rel="stylesheet"
+      />
       <Navbar />
 
       <h1 className=" h1 text-center m-3 text-danger">
