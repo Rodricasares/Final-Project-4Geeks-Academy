@@ -44,7 +44,7 @@ export const Register = () => {
       <Navbar />
       <div className="row justify-content-center">
         <div className="col-md-6 col-sm-4">
-          <h3 className="text-center text-white p-3">Registro de usuarios</h3>
+          <h3 className="text-center text-white p-3">User Sing Up</h3>
 
           <form>
             <div className="container-sm bg-light rounded opacity-75 p-5">

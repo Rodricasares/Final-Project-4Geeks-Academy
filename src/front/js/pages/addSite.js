@@ -40,40 +40,40 @@ export const AddSite = (props) => {
             <div class="container-sm bg-light rounded  p-5">
               <div class="mb-3 ">
                 <label for="name" class="form-label">
-                  Nombre del sitio
+                  Place Name
                 </label>
                 <input
                   type="text"
                   className="form-control"
                   id="name"
                   name="name"
-                  placeholder="Escriba el nombre del lugar"
+                  placeholder="Add Name"
                   onChange={handleChange}
                 />
               </div>
               <div class="mb-3 ">
                 <label for="city" class="form-label">
-                  Ciudad
+                  City
                 </label>
                 <input
                   type="text"
                   className="form-control"
                   id="city"
                   name="city"
-                  placeholder="Escriba el nombre de la ciudad donde esta"
+                  placeholder="Add City"
                   onChange={handleChange}
                 />
               </div>
               <div class="mb-3">
                 <label for="location" class="form-label">
-                  Localización
+                  Location
                 </label>
                 <input
                   type="text"
                   className="form-control"
                   id="location"
                   name="location"
-                  placeholder="Escriba la localizacion"
+                  placeholder="Add Localitation"
                   onChange={handleChange}
                 />
               </div>
@@ -86,7 +86,7 @@ export const AddSite = (props) => {
                   className="form-control"
                   id="video"
                   name="video"
-                  placeholder="Inserte el video"
+                  placeholder="Add video"
                   onChange={handleChange}
                 />
               </div>
@@ -99,20 +99,20 @@ export const AddSite = (props) => {
                   className="form-control"
                   id="image"
                   name="image"
-                  placeholder="Inserte una imagen"
+                  placeholder="Add Image"
                   onChange={handleChange}
                 />
               </div>
               <div class="mb-3">
                 <label for="description" class="form-label">
-                  Descripcion
+                  Description
                 </label>
                 <input
                   type="text"
                   className="form-control"
                   id="description"
                   name="description"
-                  placeholder="Escriba una descripcion del lugar"
+                  placeholder="Add description Place"
                   onChange={handleChange}
                 />
               </div>

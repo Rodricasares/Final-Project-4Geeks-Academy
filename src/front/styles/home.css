@@ -13,7 +13,7 @@ html {
 }
 
 .header {
-  background: url(https://img.freepik.com/free-photo/travel-world-monument-concept_117023-846.jpg?w=2000);
+  background: url(https://media.discordapp.net/attachments/936703994544410725/969569525093785620/ezgif.com-gif-maker.png?width=1408&height=616);
   background-repeat: no-repeat;
   max-width: 100%;
   height: 750px;
@@ -57,14 +57,14 @@ body {
   font-size: 15px;
 }
 
-h3 {
-  font-family: "Staatliches", cursive;
-}
+h3,
 h4 {
   font-family: "Staatliches", cursive;
 }
+
 h5 {
   font-family: "Staatliches", cursive;
+  color: gray;
 }
 p {
   font-family: "Poiret One", cursive;

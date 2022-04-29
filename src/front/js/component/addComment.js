@@ -26,7 +26,7 @@ export const AddComment = (props) => {
           <div className="card-body">
             <div className="mb-3">
               <label for="comment" className="form-label fw-bold">
-                Escribir comentario
+                Whrite your comment
               </label>
               <textarea
                 className="form-control"
@@ -35,7 +35,7 @@ export const AddComment = (props) => {
                 rows="3"
               ></textarea>
               <button onClick={sendComment} className="btn btn-danger mt-3 ">
-                Publicar
+                Add comment
               </button>
             </div>
           </div>
