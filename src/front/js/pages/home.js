@@ -202,17 +202,12 @@ export const Home = () => {
           <div className="col-12  col-sm-6 py-5">
             <div class="row g-0 shadow p-4 mb-3 bg-body rounded">
               <div className="col-sm-6 col-md-8 p-3  infoCard">
-                <h5>What is Lorem Ipsum?</h5>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
+                <h5>Athens</h5>
+                The city is a place chosen by thousands of tourists a year who
+                enjoy its culture, its museums, its spectacular views, its
+                neighborhoods, its gastronomy and traditions. for being a place
+                fascinating and full of history, traveling to Athens is a plan
+                that you have to do sometime in your life
               </div>
               <div className="col-6 col-md-4">
                 <img
@@ -224,17 +219,19 @@ export const Home = () => {
             </div>
             <div class="row g-0 shadow p-3 mb-2 bg-body rounded">
               <div className="col-sm-6 col-md-8 p-3 infoCard">
-                <h5>What is Lorem Ipsum?</h5>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
+                <h5>machu picchu</h5>
+                Traveling to Machu Picchu is the dream of practically everyone
+                time to plan a trip to Peru. Being able to enter the ancient
+                lost city of the Incas without a doubt, it is something that is
+                remains in the memory forever of those who have that
+                opportunity. Not for nothing is the iconic symbol of the country
+                and one of the new wonders of the world, the largest
+                archaeological site important in South America. Surely if you
+                are planning a route through Peru, you want to include Machu
+                Picchu at some point of she. Precisely in this complete guide
+                you will find all the information you need to organize your
+                visit to Machu Picchu, from how to get there, where and how to
+                buy your tickets, what route to do, tips and much more.
               </div>
               <div className="col-6 col-md-4">
                 <img

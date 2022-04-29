@@ -9,7 +9,7 @@ export const Comment = (props) => {
   return (
     <div className=" col-md-12 col-lg-6 my-3">
       <div className="card">
-        <div className="card-header  bg-danger d-flex justify-content-between fw-bold">
+        <div className="card-header   bg-danger d-flex justify-content-between fw-bold">
           {props.user}
 
           <img
@@ -21,7 +21,7 @@ export const Comment = (props) => {
           />
         </div>
         <div className="card-body">
-          <p className="p">{props.text}</p>
+          <p className="p text-dark fw-bold">{props.text}</p>
         </div>
       </div>
     </div>

@@ -55,6 +55,7 @@ body {
 .infoCard {
   font-family: "Poiret One", cursive;
   font-size: 15px;
+  font-weight: bold;
 }
 
 h3,
@@ -68,6 +69,7 @@ h5 {
 }
 p {
   font-family: "Poiret One", cursive;
+  font-weight: bold;
 }
 @media (max-width: 768px) {
   /* Estos estilos solo se aplicarán hasta el tamaño indicado */
