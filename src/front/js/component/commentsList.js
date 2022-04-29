@@ -7,7 +7,7 @@ export const CommentList = () => {
 
   return (
     <div className=" container mb-5   ">
-      <h1 className="text-danger py-3">Comentarios</h1>
+      <h1 className="text-danger py-3">Comments</h1>
 
       <div className=" container">
         <div className="row">

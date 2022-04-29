@@ -95,42 +95,44 @@ export const Home = () => {
                     className="d-block w-100"
                     alt="..."
                     height="500px"
+                    width="auto"
                   />
                   <div className="carousel-caption d-none d-md-block">
-                    <h5>El mundo en un solo click</h5>
+                    <h4>The world in one click</h4>
                     <p className="fw-bold">
-                      Visita cualquier lugar del mundo y vive una experiencia
-                      única.{" "}
+                      Visit anywhere in the world and live the experience{" "}
                     </p>
                   </div>
                 </div>
                 <div className="carousel-item">
                   <img
-                    src="https://mediterrani.com/wp-content/uploads/2021/03/turismo-virtual-realidad.jpg"
+                    src="https://www.virtualreality.com.co/images/video-360-colombia-immersive-video-360-slider.jpg"
                     className="d-block w-100"
                     alt="..."
                     height="500px"
+                    width="auto"
                   />
                   <div className="carousel-caption d-none d-md-block">
-                    <h5>Sumergete en lo mas profundo !!!</h5>
-                    <p>
-                      Con tus gafas, smartphone o laptop podras acceder y
-                      visitar lugares enblematicos.
+                    <h4>Dive into the deep end!!!</h4>
+                    <p className="fw-bold">
+                      Virtual glasses, smartphone or laptop you can access and
+                      visit amazing places.
                     </p>
                   </div>
                 </div>
                 <div className="carousel-item">
                   <img
-                    src="https://ep01.epimg.net/elpais/imagenes/2020/03/18/paco_nadal/1584558593_892321_1584558763_noticia_normal.jpg"
+                    src="https://ep01.epimg.net/elviajero/imagenes/2020/04/02/actualidad/1585815147_832029_1585815375_noticia_normal.jpg"
                     className="d-block w-100"
                     alt="..."
                     height="500px"
+                    width="auto"
                   />
                   <div className="carousel-caption d-none d-md-block">
-                    <h5>Tu album virtual 360º</h5>
-                    <p>
-                      Podras cargar tus propias experiencias y disfrutar la de
-                      otros usuarios.
+                    <h4>Your own 360º virtual video profile!!!</h4>
+                    <p className="fw-bold">
+                      You can create your own experiences and enjoy that of
+                      other users.
                     </p>
                   </div>
                 </div>
@@ -198,7 +200,7 @@ export const Home = () => {
 
         <div className="row ">
           <div className="col-12  col-sm-6 py-5">
-            <div class="row g-0 shadow p-3 mb-2 bg-body rounded">
+            <div class="row g-0 shadow p-4 mb-3 bg-body rounded">
               <div className="col-sm-6 col-md-8 p-3  infoCard">
                 <h5>What is Lorem Ipsum?</h5>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -214,7 +216,7 @@ export const Home = () => {
               </div>
               <div className="col-6 col-md-4">
                 <img
-                  src="https://viajes.nationalgeographic.com.es/medio/2019/06/06/macu_5da3ead6_1200x630.jpg"
+                  src="https://www.il-colosseo.it/images/Il_Foro_Romano/Foro_Romano_Colosseo_04.jpg"
                   width="100%"
                   height="100%"
                 />
@@ -256,18 +258,18 @@ export const Home = () => {
                   allowfullscreen
                 ></iframe>
                 <div class="card-body ">
-                  <h4 class="card-title pb-2">Viaja alrededor del Mundo</h4>
+                  <h4 class="card-title pb-2">Travel around the world</h4>
                   <p class="card-text ">
-                    ¡¡Vive la experiencia de visitar los lugares mas increibles
-                    del mundo sin necesidad de coger un avion!!
+                    Live the experience of visiting the most incredible places
+                    of the world without having to take a plane!!!
                   </p>
                   <h5>
-                    Graba tu experiencia y compartela con{" "}
-                    <span class="badge bg-danger ">nosotr@s!!!</span>
+                    Record your experience and share it with{" "}
+                    <span class="badge bg-danger ">Us !!!</span>
                   </h5>
 
                   <h3 className="text-center">
-                    Gracias a la realid Virtual !!!
+                    All Thanks to Virtual Reality!!!
                   </h3>
                 </div>
               </div>

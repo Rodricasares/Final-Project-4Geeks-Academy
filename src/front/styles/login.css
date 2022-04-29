@@ -6,3 +6,9 @@
   height: 900px;
   width: 100%;
 }
+h3 {
+  font-family: "Staatliches", cursive;
+}
+input {
+  font-family: "Poiret One", cursive;
+}

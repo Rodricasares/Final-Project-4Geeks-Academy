@@ -9,6 +9,12 @@ export const Login = () => {
   let history = useHistory();
   return (
     <div className="container-fluid mx-auto login ">
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Anton&family=Pacifico&family=Permanent+Marker&family=Poiret+One&family=Quicksand:wght@300&family=Staatliches&display=swap"
+        rel="stylesheet"
+      />
       <Navbar />
       <div className="row  justify-content-center">
         <div className="col-md-6 col-sm-4">
@@ -42,7 +48,7 @@ export const Login = () => {
             </div>
             <button
               type="button"
-              className="btn btn-primary"
+              className="btn btn-outline-danger"
               onClick={() => {
                 fetch(process.env.BACKEND_URL + "/api/login", {
                   method: "POST",

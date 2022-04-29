@@ -27,13 +27,19 @@ export const Protected = () => {
 
   return (
     <div className="fondo_protected">
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Anton&family=Pacifico&family=Permanent+Marker&family=Poiret+One&family=Quicksand:wght@300&family=Staatliches&display=swap"
+        rel="stylesheet"
+      />
       <Navbar />
       <div className=" container-fluid mb-5   ">
         <div className="d-flex justify-content-between border-bottom  border-danger">
-          <h1 className="text-danger px-5 ">Mis Lugares</h1>
+          <h1 className="text-danger px-5 ">My travels video 360</h1>
           <Link to="/addSite">
-            <button className="btn btn-danger me-3 fw-bold">
-              añadir nuevo lugar
+            <button className="btn btn-outline-danger me-3 fw-bold">
+              Add Site
             </button>
           </Link>
         </div>

@@ -23,7 +23,7 @@ export const SearchSite = (props) => {
           className="form-control form-control-lg mx-1 "
           id="formId"
           onChange={handleChange}
-          placeholder="Introduce un lugar o ciudad..."
+          placeholder="Add place or monument"
         />
 
         <button
@@ -31,7 +31,7 @@ export const SearchSite = (props) => {
           onClick={handleSubmit}
           className="btn btn-light text-secondary fw-bold "
         >
-          Explorar
+          Explore
         </button>
       </div>
     </div>
